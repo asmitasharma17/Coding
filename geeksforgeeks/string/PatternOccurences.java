@@ -29,11 +29,6 @@ public class PatternOccurences {
                 while (count !=0)
                     stack.pop();
             }
-
-            
-            
-
         }
-
     }
 }

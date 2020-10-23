@@ -3,7 +3,6 @@ package geeksforgeeks.string;
 public class ReverseString {
 
     public static void main(String[] args) {
-
         String word = "abc";
         getReverseStringUsing2Pointers(word);
 

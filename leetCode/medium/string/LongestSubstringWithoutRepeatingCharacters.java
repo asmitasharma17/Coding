@@ -22,7 +22,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return count;
     }
 
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstring4(String s) {
         int n = s.length(), ans = 0;
         Map<Character, Integer> map = new HashMap<>(); // current index of character
         // try to extend the range [i, j]
@@ -36,12 +36,29 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return ans;
     }
 
-    public int lengthOfLongestPalindrome(String s) {
-        int longestPalindrome = 0;
+    public int lengthOfLongestSubstring(String s) {
+        char[] strCh = s.toCharArray();
+        String maxString = "";
 
+        //abbacd
+        for(int i=0; i<strCh.length ; i++) {
+            //ts.add(strCh[i]+"");
+            String newString = "";
+            //newString += strCh[i]+"";
+            newString.concat((strCh[i]) + "");
 
-        return longestPalindrome;
+            if (strCh[i] + "" != strCh[++i] + "") {
+                newString.concat((strCh[i]) + "");
+            } else {
+                System.out.println(maxString);
+                System.out.println(newString);
+                if (maxString.length() < newString.length()) {
+                    maxString = newString;
+                }
+            }
 
+        }
+        return maxString.length();
     }
 
     public static void main(String[] args) {
